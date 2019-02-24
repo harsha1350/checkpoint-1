@@ -17,45 +17,28 @@ DONT CHANGE THE FUNCTION HEADERS.
 
 */
 
+
 #include <stdio.h>
-int countFactorials(int low, int high) 
-{ 
-// Find the first factorial number 'fact' greater than or 
-// equal to 'low' 
-int fact = 1, x = 1; 
-while (fact < low) 
-{ 
-fact = fact*x; 
-x++; 
-} 
-  
-//counting number of factorials in range of [low,high]
-int count = 0; 
-while (fact <= high) 
-{ 
-count++; 
-fact = fact*x; 
-x++; 
-} 
-  
-// Return the count 
-return count; 
-} 
-int main()
+int countFactorials(long l, long h)
 {
-int l,h;
-int result;
-scanf("%d %d",&l,&h);
-if((l<=0 && h<=0) || (l>=h))
+if((l<=0 || h<=0 || l>h)
 {
-printf("-1");
+return -1;
 }
 else
 {
-result=countFactorials(l,h);
-printf("\n %d",result);
+int x,y,count=0,fact;
+	for(x=l;x<h/2;x++)
+	{  fact=1;
+		for(y=1;y<=i;y++)
+		{
+			fact=fact*y;
+		}
+		if(fact<=h)
+		count++;
+		
+		
+	}
+	return count;
 }
-	return 0;
 }
-
-
