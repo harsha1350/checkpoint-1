@@ -12,25 +12,16 @@ ERROR CASES: Return -1 in error cases.
 NOTES:
 */
 #include<stdio.h>
-int count(int num1, int num2) {
-int c;
-c=num2/num1;
-printf("%d",c);
-	return 0;
-}
-int main()
+int count(int num1, int num2) 
+{if((num1<=0 || num2<=0)||(num2<num1))
 {
-int initial,final;
-scanf("%d %d",&initial,&final);
-if(initial<=0 || final<=0 || initial>final)
-{
-printf("-1");
+return -1;
 }
 else
 {
-count(initial,final);
+int c;
+c=num2/num1;
+printf("%d",c);
+	return c;
 }
-return 0;
 }
-
-
